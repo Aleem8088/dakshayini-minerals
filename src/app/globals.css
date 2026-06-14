@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand: #E77F19;
+  --color-brand-dark: #D06A10;
+  --color-cream: #FCFAF5;
+  --color-dark: #000000;
+  --color-dark-green: #2B3A2E;
+  --color-text: #333333;
+  --color-text-light: #616161;
+  --color-text-green: #434E45;
+  --color-border: #E5E5E5;
+  --font-barlow: "Barlow", sans-serif;
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-text);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up { animation: fadeInUp 0.55s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.35s ease-out forwards; }
+
+.animate-delay-200 { animation-delay: 150ms; }
+.animate-delay-300 { animation-delay: 280ms; }
+
+/* Scroll reveal — progressive enhancement: content is visible by default and
+   only hidden once JS adds `.js` to <html>, so it can never get stuck invisible
+   if JS is disabled or fails. */
+.scroll-hidden { opacity: 1; }
+.js .scroll-hidden,
+.js .scroll-visible {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.js .scroll-hidden { opacity: 0; transform: translateY(24px); }
+.js .scroll-visible { opacity: 1; transform: translateY(0); }
+
+.small-caps {
+  font-variant-caps: all-small-caps;
+}
+
+/* Loading skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton {
+  background-color: #ececec;
+  background-image: linear-gradient(
+    90deg,
+    rgba(236, 236, 236, 0) 0%,
+    rgba(255, 255, 255, 0.65) 50%,
+    rgba(236, 236, 236, 0) 100%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton { animation: none; }
+}
+
+/* Respect users who prefer reduced motion: neutralize all animation/transition. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .js .scroll-hidden {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

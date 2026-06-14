@@ -1,0 +1,39 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="80" height="80" fill="#434242"/>
+<g id="About Us">
+<rect width="1440" height="3142" transform="translate(-964 -1962)" fill="white"/>
+<g id="Frame 1948758667">
+<rect width="1440" height="452" transform="translate(-964 -212)" fill="white"/>
+<g id="Frame 1948758680">
+<rect width="1240" height="164" transform="translate(-864 -24)" fill="white"/>
+<g id="Frame 1948758678">
+<rect x="-24" y="-24" width="400" height="164" fill="white"/>
+<rect x="-24" y="-24" width="400" height="164" stroke="#BFBFBF"/>
+<g id="Frame" clip-path="url(#clip0_364_23)">
+<g id="Clip path group">
+<mask id="mask0_364_23" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
+<g id="clip0_4418_9500">
+<path id="Vector" d="M80 0H0V80H80V0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_364_23)">
+<g id="Group">
+<path id="Vector_2" d="M50.0001 6.66663V40C50.0001 43.6666 47.0001 46.6666 43.3334 46.6666H6.66675V20C6.66675 12.6333 12.6334 6.66663 20.0001 6.66663H50.0001Z" stroke="#E77F19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M73.3334 46.6666V56.6666C73.3334 62.2 68.8667 66.6666 63.3334 66.6666H60.0001C60.0001 63 57.0001 60 53.3334 60C49.6667 60 46.6667 63 46.6667 66.6666H33.3334C33.3334 63 30.3334 60 26.6667 60C23.0001 60 20.0001 63 20.0001 66.6666H16.6667C11.1334 66.6666 6.66675 62.2 6.66675 56.6666V46.6666H43.3334C47.0001 46.6666 50.0001 43.6666 50.0001 40V16.6666H56.1334C58.5334 16.6666 60.7334 17.9667 61.9334 20.0333L67.6334 30H63.3334C61.5001 30 60.0001 31.5 60.0001 33.3333V43.3333C60.0001 45.1666 61.5001 46.6666 63.3334 46.6666H73.3334Z" stroke="#E77F19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M26.6667 73.3333C30.3486 73.3333 33.3333 70.3487 33.3333 66.6667C33.3333 62.9847 30.3486 60 26.6667 60C22.9848 60 20 62.9847 20 66.6667C20 70.3487 22.9848 73.3333 26.6667 73.3333Z" stroke="#E77F19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M53.3334 73.3333C57.0154 73.3333 60.0001 70.3487 60.0001 66.6667C60.0001 62.9847 57.0154 60 53.3334 60C49.6514 60 46.6667 62.9847 46.6667 66.6667C46.6667 70.3487 49.6514 73.3333 53.3334 73.3333Z" stroke="#E77F19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M73.3333 40V46.6667H63.3333C61.5 46.6667 60 45.1667 60 43.3333V33.3333C60 31.5 61.5 30 63.3333 30H67.6333L73.3333 40Z" stroke="#E77F19" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_364_23">
+<rect width="80" height="80" fill="white"/>
+</clipPath>
+</defs>
+</svg>
