@@ -7,34 +7,42 @@ const steps = [
   {
     title: "Raw Material Selection & Feeding",
     desc: "Raw materials are sourced from certified quarries and carefully selected, then fed into the plant through controlled feeders for a steady, consistent supply.",
+    image: "/images/process-1.jpg",
   },
   {
     title: "Primary Crushing (Jaw Crusher)",
     desc: "Large rocks are reduced into manageable sizes using high-capacity jaw crushers, forming the base feed for downstream processing.",
+    image: "/images/process-2.jpg",
   },
   {
     title: "Secondary Crushing (Cone Crusher)",
     desc: "Pre-crushed material is further reduced in cone crushers, improving particle shape and preparing it for fine crushing and grading.",
+    image: "/images/process-3.jpg",
   },
   {
     title: "Tertiary Crushing (VSI Crusher)",
     desc: "Vertical Shaft Impact (VSI) crushers shape the aggregate and produce high-quality manufactured sand with optimized gradation.",
+    image: "/images/process-4.jpg",
   },
   {
     title: "Screening & Grading",
     desc: "Crushed material is screened and separated into precise size fractions — 6mm, 12mm, 20mm, 40mm — ensuring consistent grading.",
+    image: "/images/process-5.jpg",
   },
   {
     title: "Sand Washing & Processing",
     desc: "Sand is washed to remove silt, clay, and impurities, producing clean, high-purity M-Sand, P-Sand, and W-Sand.",
+    image: "/images/process-6.jpg",
   },
   {
     title: "Quality Control & Testing",
     desc: "Samples are tested for gradation, flakiness, silt content, and strength to ensure every batch meets IS and project specifications.",
+    image: "/images/process-7.jpg",
   },
   {
     title: "Storage & Dispatch",
     desc: "Finished materials are stored by grade and dispatched efficiently to construction sites with reliable, on-time delivery.",
+    image: "/images/process-8.jpg",
   },
 ];
 
@@ -50,6 +58,9 @@ export default function ProcessSteps() {
             <div key={i} className="border-b border-[#BBBBBB] last:border-b-0">
               <button
                 onClick={() => setActive(i)}
+                onMouseEnter={() => setActive(i)}
+                onFocus={() => setActive(i)}
+                aria-expanded={isActive}
                 className="flex w-full items-center gap-6 py-5 text-left lg:gap-10"
               >
                 <span
@@ -89,14 +100,19 @@ export default function ProcessSteps() {
 
       <div className="order-1 w-full lg:order-2 lg:flex-1">
         <div className="relative h-[320px] w-full overflow-hidden sm:h-[460px] lg:sticky lg:top-[110px] lg:h-[612px]">
-          <Image
-            src="/images/process-step.jpg"
-            alt="Dakshayini Minerals production process"
-            fill
-            loading="lazy"
-            sizes="(max-width: 1024px) 100vw, 590px"
-            className="object-cover"
-          />
+          {steps.map((step, i) => (
+            <Image
+              key={step.image}
+              src={step.image}
+              alt={step.title}
+              fill
+              loading={i === 0 ? "eager" : "lazy"}
+              sizes="(max-width: 1024px) 100vw, 610px"
+              className={`object-cover transition-opacity duration-500 ${
+                active === i ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </div>

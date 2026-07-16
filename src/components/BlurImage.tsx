@@ -11,7 +11,7 @@ export default function BlurImage(props: ImageProps) {
   const blur = blurData[key];
 
   if (blur) {
-    return <Image quality={90} placeholder="blur" blurDataURL={blur} {...props} />;
+    return <Image quality={95} placeholder="blur" blurDataURL={blur} {...props} />;
   }
-  return <Image quality={90} {...props} />;
+  return <Image quality={95} {...props} />;
 }
