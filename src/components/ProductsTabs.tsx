@@ -5,71 +5,44 @@ import Link from "next/link";
 import Image from "@/components/BlurImage";
 import ArrowIcon from "./ArrowIcon";
 
-const products = [
+type Group = {
+  id: string;
+  tab: string;
+  description: string;
+  items: string[];
+  image: string;
+};
+
+const groups: Group[] = [
   {
-    id: "m-sand",
-    tab: "M Sand",
-    badge: "Manufactured Sand",
-    title: "M-Sand",
-    description: (
-      <>
-        Produced using VSI crushing and controlled screening, M-Sand offers{" "}
-        <strong>optimized particle shape and grading,</strong> resulting in
-        improved concrete strength and reduced void content. Suitable for RCC,
-        block work, and plastering.
-      </>
-    ),
-    image: "/images/product-msand.jpg",
+    id: "fine-aggregates",
+    tab: "Fine Aggregates",
+    description:
+      "Fine, uniformly graded sand processed for surface applications. Ensures smooth finish, reduced cracking, and strong adhesion in plastering and finishing layers.",
+    items: ["Manufactured Sand (M-Sand)", "Plastering Sand (P-Sand)"],
+    image: "/images/product-fine.jpg",
   },
   {
-    id: "p-sand",
-    tab: "P Sand",
-    badge: "Plastering Sand",
-    title: "P-Sand",
-    description: (
-      <>
-        Ultra-fine manufactured sand for smooth plaster finishes.{" "}
-        <strong>Controlled grain size</strong> ensures uniform wall textures and
-        consistent mix ratios with minimal material wastage.
-      </>
-    ),
-    image: "/images/product-psand.jpg",
+    id: "course-aggregates",
+    tab: "Course Aggregates",
+    description:
+      "Machine-crushed and screened aggregates with controlled particle size distribution and minimal flakiness.",
+    items: ["6mm Aggregate", "12mm Aggregate", "20mm Aggregate", "40mm Aggregate"],
+    image: "/images/product-course.jpg",
   },
   {
-    id: "w-sand",
-    tab: "W Sand",
-    badge: "Washed Sand",
-    title: "W-Sand",
-    description: (
-      <>
-        Natural sand processed through{" "}
-        <strong>multi-stage washing</strong> to remove silt and clay. Used in
-        specialized concrete mixes requiring high purity and excellent drainage
-        properties.
-      </>
-    ),
-    image: "/images/product-wsand.jpg",
-  },
-  {
-    id: "gsb",
-    tab: "GSB & Wet Mix Macadam",
-    badge: "Road Construction Materials",
-    title: "GSB & Wet Mix Macadam",
-    description: (
-      <>
-        Engineered road construction materials produced to{" "}
-        <strong>IRC/MoRTH specifications.</strong> These materials form the
-        critical sub-base and base layers of road pavements with precise grading
-        control.
-      </>
-    ),
-    image: "/images/product-gsb.jpg",
+    id: "road-construction-materials",
+    tab: "Road Construction Materials",
+    description:
+      "Engineered materials for load distribution and pavement strength.",
+    items: ["Wet Mix Macadam (WMM)", "Granular Sub Base (GSB)"],
+    image: "/images/product-road.jpg",
   },
 ];
 
 export default function ProductsTabs() {
   const [activeTab, setActiveTab] = useState(0);
-  const product = products[activeTab];
+  const group = groups[activeTab];
 
   return (
     <section className="w-full bg-white px-6 md:px-[100px] py-16 md:py-[80px]">
@@ -97,9 +70,9 @@ export default function ProductsTabs() {
         {/* Tabs */}
         <div className="flex flex-col gap-10">
           <div className="flex items-center gap-5 border-b border-[#CDCDCD] overflow-x-auto">
-            {products.map((p, i) => (
+            {groups.map((g, i) => (
               <button
-                key={p.id}
+                key={g.id}
                 onClick={() => setActiveTab(i)}
                 className={`relative small-caps whitespace-nowrap text-xl font-medium px-3 py-3 transition-colors duration-200 ${
                   activeTab === i
@@ -107,7 +80,7 @@ export default function ProductsTabs() {
                     : "text-[#58534F] hover:text-[var(--color-brand)]"
                 }`}
               >
-                {p.tab}
+                {g.tab}
                 {activeTab === i && (
                   <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--color-brand)]" />
                 )}
@@ -116,38 +89,39 @@ export default function ProductsTabs() {
           </div>
 
           {/* Content */}
-          <div key={activeTab} className="animate-fade-in grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div
+            key={activeTab}
+            className="animate-fade-in grid grid-cols-1 lg:grid-cols-[610px_1fr] gap-10 lg:gap-[40px] items-center"
+          >
             <div className="relative order-2 lg:order-1 w-full h-[300px] sm:h-[375px] overflow-hidden">
               <Image
-                src={product.image}
-                alt={product.title}
+                src={group.image}
+                alt={group.tab}
                 fill
                 loading="lazy"
                 sizes="(max-width: 1024px) 100vw, 610px"
                 className="object-cover"
-                key={product.id}
+                key={group.id}
               />
             </div>
-            <div className="order-1 lg:order-2 flex flex-col gap-10">
-              <div className="flex flex-col gap-5">
-                <div className="flex flex-col gap-1">
-                  <span className="inline-flex items-center gap-2.5 w-fit border border-[var(--color-brand)] rounded-full px-3.5 py-1.5">
-                    <span className="w-[7px] h-[7px] rounded-full bg-[var(--color-brand)]" />
-                    <span className="small-caps text-base font-medium tracking-[2px] text-[var(--color-brand)]">
-                      {product.badge}
-                    </span>
-                  </span>
-                  <h3 className="text-[40px] font-semibold text-[var(--color-dark-green)] leading-[48px]">
-                    {product.title}
-                  </h3>
-                </div>
-                <p className="text-base text-[var(--color-text)] leading-[140%]">
-                  {product.description}
-                </p>
-              </div>
+            <div className="order-1 lg:order-2 flex flex-col gap-8">
+              <p className="text-base sm:text-lg text-[var(--color-text)] leading-[140%]">
+                {group.description}
+              </p>
+              <ul className="flex flex-col gap-3">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-base sm:text-lg text-[var(--color-dark-green)]"
+                  >
+                    <span className="h-[7px] w-[7px] shrink-0 bg-[var(--color-brand)]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <div>
                 <Link
-                  href={`/products/${product.id}`}
+                  href="/products"
                   className="small-caps inline-flex items-center justify-center border border-[var(--color-brand)] text-[var(--color-brand)] text-base font-medium px-5 py-2.5 hover:bg-[var(--color-brand)] hover:text-white transition-colors duration-300"
                 >
                   Read More

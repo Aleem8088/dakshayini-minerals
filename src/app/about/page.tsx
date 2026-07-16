@@ -13,6 +13,8 @@ const partners = [
   {
     name: "Kiran Jain",
     role: "Managing Partner",
+    image: "/images/partner-1.jpg",
+    linkedin: "#",
     bio: [
       "With over 30 years of experience in mining, material processing, and aggregates, Kiran Jain brings deep technical expertise in plant operations, production systems, and quality control.",
       "His leadership ensures efficient plant performance, optimized output, and adherence to industry standards across all facilities.",
@@ -21,6 +23,8 @@ const partners = [
   {
     name: "Ramesh Patel",
     role: "Partner",
+    image: "/images/partner-2.jpg",
+    linkedin: "#",
     bio: [
       "A diversified entrepreneur with experience across hospitality (Patel’s Inn), mining, and real estate, Ramesh Patel drives strategic growth and business expansion.",
       "His background in building and scaling ventures strengthens Dakshayini’s market positioning and long-term vision.",
@@ -29,6 +33,8 @@ const partners = [
   {
     name: "Srinivas Patel",
     role: "Partner",
+    image: "/images/partner-3.jpg",
+    linkedin: "#",
     bio: [
       "With over 30 years of experience in real estate and mining, Srinivas Patel brings strong industry insight and execution capability.",
       "A respected professional and philanthropist, he plays a key role in operational alignment, stakeholder relationships, and ensuring consistent delivery across projects.",
@@ -100,22 +106,42 @@ export default function AboutPage() {
               Partners &amp; Promoters
             </h2>
           </ScrollReveal>
-          <div className="flex flex-col gap-12 md:gap-20">
+          <div className="flex flex-col gap-14 md:gap-16">
             {partners.map((partner, i) => (
               <ScrollReveal key={i} delay={i * 100}>
-                <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
-                  <div className="flex items-stretch gap-6 lg:w-[310px] lg:shrink-0">
-                    <span className="w-[3px] shrink-0 bg-[var(--color-brand)]" />
-                    <div className="flex flex-col gap-1.5">
+                <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
+                  {/* Portrait + name */}
+                  <div className="flex flex-col gap-4 lg:w-[294px] lg:shrink-0">
+                    <div className="relative h-[380px] w-full overflow-hidden sm:h-[415px] lg:w-[294px]">
+                      <Image
+                        src={partner.image}
+                        alt={partner.name}
+                        fill
+                        loading="lazy"
+                        sizes="(max-width: 1024px) 100vw, 294px"
+                        className="object-cover"
+                      />
+                      <a
+                        href={partner.linkedin}
+                        aria-label={`${partner.name} on LinkedIn`}
+                        className="absolute bottom-0 right-0 flex h-8 w-8 items-center justify-center bg-black text-white transition-colors hover:bg-[var(--color-brand)]"
+                      >
+                        <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="currentColor" aria-hidden="true">
+                          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8h4.5v14H.24V8zM8.24 8h4.31v1.92h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V22h-4.5v-6.62c0-1.58-.03-3.61-2.2-3.61-2.2 0-2.54 1.72-2.54 3.5V22h-4.5V8z" />
+                        </svg>
+                      </a>
+                    </div>
+                    <div className="flex flex-col gap-1">
                       <h3 className="small-caps text-2xl font-medium text-black">
                         {partner.name}
                       </h3>
-                      <p className="text-base text-[#333]">{partner.role}</p>
+                      <p className="text-base text-[#58534F]">{partner.role}</p>
                     </div>
                   </div>
-                  <div className="flex flex-1 flex-col gap-2.5">
+                  {/* Bio */}
+                  <div className="flex flex-1 flex-col gap-4">
                     {partner.bio.map((para, j) => (
-                      <p key={j} className="text-base leading-[1.5] text-[#333]">
+                      <p key={j} className="text-base leading-[1.6] text-[#333]">
                         {para}
                       </p>
                     ))}

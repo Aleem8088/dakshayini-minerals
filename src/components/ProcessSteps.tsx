@@ -90,7 +90,7 @@ export default function ProcessSteps() {
       <div className="order-1 w-full lg:order-2 lg:flex-1">
         <div className="relative h-[320px] w-full overflow-hidden sm:h-[460px] lg:sticky lg:top-[110px] lg:h-[612px]">
           <Image
-            src="/images/about-overview.jpg"
+            src="/images/process-step.jpg"
             alt="Dakshayini Minerals production process"
             fill
             loading="lazy"
