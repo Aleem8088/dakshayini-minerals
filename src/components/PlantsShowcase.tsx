@@ -84,7 +84,7 @@ export default function PlantsShowcase() {
       <div className="flex flex-col gap-12 md:gap-16">
         {/* Header */}
         <div className="px-6 md:px-[100px]">
-          <div className="mx-auto flex max-w-[1240px] flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+          <div className="mx-auto flex max-w-[1240px] flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <h2 className="small-caps text-3xl sm:text-[40px] font-semibold leading-[1.1] text-[#2B3A2E] lg:max-w-[390px]">
               Three Plants. One Reliable Network
             </h2>

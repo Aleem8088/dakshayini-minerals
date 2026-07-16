@@ -55,7 +55,7 @@ export default function Header() {
         scrolled || !isHeroPage ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
-      <nav className="flex items-center justify-between px-6 md:px-[80px] py-[20px]">
+      <nav className="mx-auto flex max-w-[1440px] items-center justify-between px-6 md:px-[100px] py-[20px]">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden p-2 -ml-2"
