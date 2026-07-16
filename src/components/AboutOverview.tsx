@@ -7,12 +7,10 @@ export default function AboutOverview() {
   return (
     <section className="w-full bg-[var(--color-cream)] px-6 md:px-[100px] py-16 md:py-[80px]">
       <div className="mx-auto max-w-[1240px] flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-[80px]">
-        <ScrollReveal className="flex w-full flex-col gap-10 lg:w-[610px]">
-          <div className="flex flex-col gap-3">
-            <h2 className="small-caps text-3xl sm:text-[40px] font-semibold leading-[1.2] text-[#2B3A2E]">
-              About Us
-            </h2>
-          </div>
+        <ScrollReveal className="flex w-full flex-col gap-6 lg:w-[610px]">
+          <h2 className="small-caps text-3xl sm:text-[40px] font-semibold leading-[1.2] text-[#2B3A2E]">
+            About Us
+          </h2>
 
           <div className="flex flex-col gap-4">
             <p className="text-base leading-relaxed text-[var(--color-text)]">
