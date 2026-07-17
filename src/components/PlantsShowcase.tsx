@@ -163,17 +163,18 @@ export default function PlantsShowcase() {
                   className="h-full w-full border-0 grayscale-[0.15]"
                 />
               </div>
-              <div key={active} className="animate-fade-in flex flex-1 flex-col gap-8">
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-                  {plant.specs.map((s) => (
-                    <div key={s.label} className="flex flex-col gap-1.5">
-                      <p className="small-caps text-base sm:text-lg font-medium text-black">
-                        {s.label}
-                      </p>
-                      <p className="text-sm sm:text-lg leading-[1.4] text-[#333]">{s.value}</p>
-                    </div>
-                  ))}
-                </div>
+              <div
+                key={active}
+                className="animate-fade-in grid flex-1 grid-cols-1 gap-8 sm:grid-cols-2"
+              >
+                {plant.specs.map((s) => (
+                  <div key={s.label} className="flex flex-col gap-1.5">
+                    <p className="small-caps text-base sm:text-lg font-medium text-black">
+                      {s.label}
+                    </p>
+                    <p className="text-sm sm:text-lg leading-[1.4] text-[#333]">{s.value}</p>
+                  </div>
+                ))}
                 <div className="flex flex-col gap-1.5">
                   <p className="small-caps text-base sm:text-lg font-medium text-black">
                     Coverage Areas:
