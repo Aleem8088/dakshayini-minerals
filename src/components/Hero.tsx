@@ -22,7 +22,7 @@ export default function Hero() {
                 Engineered Aggregates for Structural Performance
               </h1>
               <p className="text-lg text-[#D9D9D9] max-w-[628px] leading-[1.25] animate-fade-in-up animate-delay-200">
-                Dakshayini delivers precision graded aggregates and manufactured
+                Dakshayani delivers precision graded aggregates and manufactured
                 sand for infrastructure, residential, and commercial construction.
               </p>
             </div>

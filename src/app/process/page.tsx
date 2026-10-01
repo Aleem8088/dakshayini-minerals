@@ -3,7 +3,7 @@ import PageHero from "@/components/PageHero";
 import ProcessSteps from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
-  title: "Our Process | Dakshayini Minerals",
+  title: "Our Process | Dakshayani Minerals",
   description:
     "Our end-to-end production process — from certified quarries to quality-verified dispatch — delivering precision-graded aggregates and manufactured sand.",
 };

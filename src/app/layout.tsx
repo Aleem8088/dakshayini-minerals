@@ -19,7 +19,7 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Dakshayini Minerals | M-Sand and Aggregates",
+  title: "Dakshayani Minerals | M-Sand and Aggregates",
   description:
     "Precision graded aggregates and manufactured sand for infrastructure, residential, and commercial construction in Bangalore.",
 };

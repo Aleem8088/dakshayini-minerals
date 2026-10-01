@@ -14,7 +14,7 @@ export default function AboutOverview() {
 
           <div className="flex flex-col gap-4">
             <p className="text-base leading-relaxed text-[var(--color-text)]">
-              Dakshayini operates as a fully integrated aggregates and sand
+              Dakshayani operates as a fully integrated aggregates and sand
               processing supplier, delivering materials engineered for structural
               reliability. Our production systems combine controlled crushing,
               screening, and washing processes to ensure uniform grading, low

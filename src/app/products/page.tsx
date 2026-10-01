@@ -3,7 +3,7 @@ import PageHero from "@/components/PageHero";
 import ProductsCatalog from "@/components/ProductsCatalog";
 
 export const metadata: Metadata = {
-  title: "Our Products | Dakshayini Minerals",
+  title: "Our Products | Dakshayani Minerals",
   description:
     "Engineered aggregates and manufactured sand — M-Sand, P-Sand, W-Sand, GSB and Wet Mix Macadam — graded for consistent construction performance.",
 };

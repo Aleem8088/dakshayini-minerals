@@ -83,7 +83,7 @@ export default function Header() {
               showWhiteText ? "text-white" : "text-black"
             }`}
           >
-            Dakshayini Minerals
+            Dakshayani Minerals
           </span>
           <span
             className={`text-xs tracking-[2.45px] transition-colors duration-300 ${

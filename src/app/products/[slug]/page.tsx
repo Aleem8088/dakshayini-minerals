@@ -139,7 +139,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   return {
-    title: "Product Details | Dakshayini Minerals",
+    title: "Product Details | Dakshayani Minerals",
   };
 }
 

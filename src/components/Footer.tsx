@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="order-last lg:order-1 flex flex-col gap-5 sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex flex-col gap-[4.9px]">
               <span className="font-[family-name:var(--font-barlow-condensed)] text-2xl text-black">
-                Dakshayini Minerals
+                Dakshayani Minerals
               </span>
               <span className="text-xs tracking-[0.2em] text-[#474747]">
                 M-SAND AND AGGREGATES
@@ -48,7 +48,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-1.5">
                 <img src="/icons/footer-phone.svg" alt="" className="w-[18px] h-[18px] shrink-0" />
-                <span className="text-base text-[var(--color-text)]">+91 9865489876</span>
+                <span className="text-base text-[var(--color-text)]">+91 9108438243</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <img src="/icons/footer-email.svg" alt="" className="w-[18px] h-[18px] shrink-0" />
@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-black/10">
           <p className="text-sm text-[#3d3d3d]">
-            &copy; 2025 Dakshayini Minerals. All rights reserved.
+            &copy; 2025 Dakshayani Minerals. All rights reserved.
           </p>
         </div>
       </div>

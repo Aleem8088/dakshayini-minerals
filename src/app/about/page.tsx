@@ -4,9 +4,9 @@ import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "About Us | Dakshayini Minerals",
+  title: "About Us | Dakshayani Minerals",
   description:
-    "Learn about Dakshayini Minerals — a fully integrated aggregates and sand processing supplier serving Bangalore's construction industry.",
+    "Learn about Dakshayani Minerals — a fully integrated aggregates and sand processing supplier serving Bangalore's construction industry.",
 };
 
 const partners = [
@@ -23,7 +23,7 @@ const partners = [
     role: "Partner",
     bio: [
       "A diversified entrepreneur with experience across hospitality (Patel’s Inn), mining, and real estate, Ramesh Patel drives strategic growth and business expansion.",
-      "His background in building and scaling ventures strengthens Dakshayini’s market positioning and long-term vision.",
+      "His background in building and scaling ventures strengthens Dakshayani’s market positioning and long-term vision.",
     ],
   },
   {
@@ -69,7 +69,7 @@ export default function AboutPage() {
               </h2>
               <div className="flex flex-col gap-5">
                 <p className="text-base leading-[1.5] text-[#333]">
-                  Dakshayini is built on a foundation of technical expertise,
+                  Dakshayani is built on a foundation of technical expertise,
                   operational discipline, and long-term industry experience in
                   mining and construction materials. Our focus is on producing
                   precision-graded aggregates and high-quality sand that meet the

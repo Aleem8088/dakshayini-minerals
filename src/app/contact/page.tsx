@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Dakshayini Minerals",
+  title: "Contact Us | Dakshayani Minerals",
   description:
-    "Get in touch with Dakshayini Minerals for bulk orders, pricing, and delivery schedules.",
+    "Get in touch with Dakshayani Minerals for bulk orders, pricing, and delivery schedules.",
 };
 
 export default function ContactPage() {

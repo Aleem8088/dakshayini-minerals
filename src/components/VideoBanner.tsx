@@ -15,7 +15,7 @@ export default function VideoBanner() {
       {playing ? (
         <iframe
           src={`https://drive.google.com/file/d/${VIDEO_ID}/preview`}
-          title="Dakshayini Minerals plant operations"
+          title="Dakshayani Minerals plant operations"
           allow="autoplay; fullscreen"
           allowFullScreen
           className="absolute inset-0 h-full w-full border-0"

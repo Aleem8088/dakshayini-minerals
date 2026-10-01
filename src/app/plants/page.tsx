@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import PlantsShowcase from "@/components/PlantsShowcase";
 
 export const metadata: Metadata = {
-  title: "Our Plants | Dakshayini Minerals",
+  title: "Our Plants | Dakshayani Minerals",
   description:
     "Three strategically located crushing plants delivering aggregates and manufactured sand with consistent quality across the Bangalore region.",
 };
@@ -28,7 +28,7 @@ export default function PlantsPage() {
             </h2>
             <div className="flex flex-col gap-2">
               <p className="text-base leading-[1.5] text-[#333]">
-                Dakshayini Minerals is a trusted manufacturer of high-quality
+                Dakshayani Minerals is a trusted manufacturer of high-quality
                 M-Sand and construction aggregates, serving the growing
                 infrastructure and real estate needs of Bangalore. With a strong
                 foundation in the mining and construction materials sector, the
@@ -37,7 +37,7 @@ export default function PlantsPage() {
               </p>
               <p className="text-base leading-[1.5] text-[#333]">
                 Backed by multiple strategically located plants and a commitment to
-                consistent quality, Dakshayini Minerals has built a reputation for
+                consistent quality, Dakshayani Minerals has built a reputation for
                 reliability, timely supply, and dependable service across a wide
                 range of projects.
               </p>
@@ -47,7 +47,7 @@ export default function PlantsPage() {
             <div className="h-[280px] w-full overflow-hidden sm:h-[400px] lg:h-[450px]">
               <img
                 src="/images/about-overview.jpg"
-                alt="Dakshayini Minerals plant operations"
+                alt="Dakshayani Minerals plant operations"
                 className="h-full w-full object-cover"
               />
             </div>
